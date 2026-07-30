@@ -25,7 +25,7 @@ interface HostingerDeploymentHubProps {
 
 export const HostingerDeploymentHub: React.FC<HostingerDeploymentHubProps> = ({ lang }) => {
   const [copiedIndex, setCopiedIndex] = useState<string | null>(null);
-  const [activeTab, setActiveTab] = useState<'shared' | 'vps' | 'htaccess'>('shared');
+  const [activeTab, setActiveTab] = useState<'shared' | 'vps' | 'htaccess' | 'blank_fix'>('blank_fix');
 
   const htaccessContent = `<IfModule mod_rewrite.c>
   RewriteEngine On
@@ -125,6 +125,30 @@ export const HostingerDeploymentHub: React.FC<HostingerDeploymentHubProps> = ({ 
             )}
           </button>
         </div>
+      </div>
+
+      {/* EMERGENCY ALERT: BLANK WHITE SCREEN FIX */}
+      <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 rounded-2xl border border-amber-300 bg-gradient-to-r from-amber-50 to-orange-50 p-5 dark:border-amber-500/40 dark:from-amber-950/40 dark:to-orange-950/40 shadow-sm">
+        <div className="flex items-start space-x-3.5">
+          <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-amber-500 text-white font-black text-xl shadow-md shadow-amber-500/20">
+            !
+          </div>
+          <div>
+            <h3 className="text-sm font-black text-amber-900 dark:text-amber-200 flex items-center space-x-2">
+              <span>Mengalami Layar Blank Putih (White Screen) Setelah Deploy di Hostinger?</span>
+            </h3>
+            <p className="mt-1 text-xs text-amber-800/80 dark:text-amber-300/80 leading-relaxed max-w-2xl">
+              Jangan panik! Ini adalah masalah umum path statis di Vite & React SPA. Kami <strong>sudah menerapkan perbaikannya di kode aplikasi ini (`base: './'`)</strong>. Ikuti 4 langkah verifikasi di bawah agar web Anda langsung tampil sempurna!
+            </p>
+          </div>
+        </div>
+        <button
+          onClick={() => setActiveTab('blank_fix')}
+          className="shrink-0 flex items-center space-x-2 rounded-xl bg-amber-600 px-4 py-2.5 text-xs font-black text-white shadow-lg shadow-amber-600/30 hover:bg-amber-500 transition-all"
+        >
+          <ShieldCheck className="h-4 w-4" />
+          <span>Lihat 4 Solusi Blank Putih</span>
+        </button>
       </div>
 
       {/* Deploy Steps Cards */}

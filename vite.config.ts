@@ -5,6 +5,7 @@ import {defineConfig} from 'vite';
 
 export default defineConfig(() => {
   return {
+    base: './', // Solusi Mencegah Blank Putih (White Screen) di Hostinger & Subfolder
     plugins: [react(), tailwindcss()],
     resolve: {
       alias: {
