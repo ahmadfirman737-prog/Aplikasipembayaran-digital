@@ -1,0 +1,6 @@
+{
+  "name": "Sistem Penjualan & Stok Gudang",
+  "description": "Aplikasi Penjualan, Manajemen Stok, Invoice, Surat Jalan, Grafik Real-time, Notifikasi Stok Kritis, Multi-Role, 2FA, dan Ekspor Laporan.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
