@@ -1,0 +1,6 @@
+# Hostinger SEO Robots.txt Configuration
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://domain-anda.com/sitemap.xml

@@ -9,6 +9,7 @@ import {
   Code2,
   X,
   ShieldAlert,
+  Globe,
 } from 'lucide-react';
 import { UserRole } from '../types';
 import { Language, translations } from '../i18n/translations';
@@ -20,7 +21,8 @@ export type TabType =
   | 'reports'
   | 'users'
   | 'settings'
-  | 'laravel';
+  | 'laravel'
+  | 'hostinger';
 
 interface SidebarProps {
   activeTab: TabType;
@@ -88,6 +90,14 @@ export const Sidebar: React.FC<SidebarProps> = ({
       icon: Code2,
       badge: 'Laravel 11',
       badgeColor: 'bg-indigo-500/10 text-indigo-600 dark:bg-indigo-900/40 dark:text-indigo-300',
+      roles: ['admin', 'gudang', 'kasir', 'manager'],
+    },
+    {
+      id: 'hostinger' as TabType,
+      label: t.hostingerDeploy,
+      icon: Globe,
+      badge: 'Hostinger',
+      badgeColor: 'bg-purple-500/10 text-purple-600 dark:bg-purple-900/40 dark:text-purple-300',
       roles: ['admin', 'gudang', 'kasir', 'manager'],
     },
   ];

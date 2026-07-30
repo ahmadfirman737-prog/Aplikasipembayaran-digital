@@ -10,6 +10,7 @@ import { UserManagement } from './components/UserManagement';
 import { CompanySettings } from './components/CompanySettings';
 import { TwoFactorModal } from './components/TwoFactorModal';
 import { LaravelSourceCodeHub } from './components/LaravelSourceCodeHub';
+import { HostingerDeploymentHub } from './components/HostingerDeploymentHub';
 
 import {
   initialUsers,
@@ -230,6 +231,8 @@ export default function App() {
             )}
 
             {activeTab === 'laravel' && <LaravelSourceCodeHub lang={lang} />}
+
+            {activeTab === 'hostinger' && <HostingerDeploymentHub lang={lang} />}
           </div>
         </main>
       </div>

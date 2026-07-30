@@ -10,6 +10,7 @@ export const translations = {
     userManagement: 'Manajemen User',
     companySettings: 'Profil Perusahaan',
     laravelCode: 'Source Code Laravel',
+    hostingerDeploy: 'Onlinekan Hostinger',
     
     // Header & Meta
     appTitle: 'Sistem Penjualan & Stok Gudang',
@@ -111,6 +112,7 @@ export const translations = {
     userManagement: 'User Management',
     companySettings: 'Company Settings',
     laravelCode: 'Laravel Source Code',
+    hostingerDeploy: 'Hostinger Deploy',
     
     // Header & Meta
     appTitle: 'Sales & Inventory System',
